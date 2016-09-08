@@ -90,6 +90,38 @@
 		font-size: 20px;
 	}
 
+  #topStoryHeadline {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom:5px;
+    margin-bottom: 0 !important;
+    font-family: Helvetica;
+    font-weight:600;
+    font-style:italic;
+    font-size: 28px;
+  }
+
+  #topStoryBody {
+    font-family: Palatino;
+    font-size: 19px;
+    line-height: 22px;
+    font-style: normal !important;
+  }
+
+  .mediumStoryHeadline {
+    font-family: Palatino;
+    margin-bottom: 4px !important;
+  }
+
+  .mediumHeadlineCell {
+    padding-bottom: 0 !important;
+  }
+
+  .mediumStoryBody {
+    font-family: Palatino;
+    font-style: normal !important;
+  }
+
 	/**
 	* @tab Page
 	* @section heading 2
@@ -122,7 +154,7 @@
 		/*@editable*/ color:#606060 !important;
 		display:block;
 		/*@editable*/ font-family:Helvetica;
-		/*@editable*/ font-size:16px;
+		/*@editable*/ font-size:18px;
 		/*@editable*/ font-style:italic;
 		/*@editable*/ font-weight:normal;
 		/*@editable*/ line-height:100%;
@@ -604,14 +636,19 @@
                                     <tr>
                                         <td valign="top" class="bodyContent" mc:edit="body_content">
                                             <h1 id="newsletter-title">Happy Friday</h1>
-                                            <h3 id="newsletter-subheadline">Here's what you need to know about this week on campus</h3>
-                                            Customize your template by clicking on the style editor tabs up above. Set your fonts, colors, and styles. After setting your styling is all done you can click here in this area, delete the text, and start adding your own awesome content.
-                                            <br />
-                                            <br />
-                                            <h2>Styling Your Content</h2>
-                                            <h4>Make your email easy to read</h4>
-                                            After you enter your content, highlight the text you want to style and select the options you set in the style editor in the "<em>styles</em>" drop down box. Want to <a href="http://www.mailchimp.com/kb/article/im-using-the-style-designer-and-i-cant-get-my-formatting-to-change" target="_blank">get rid of styling on a bit of text</a>, but having trouble doing it? Just use the "<em>remove formatting</em>" button to strip the text of any formatting and reset your style.
+                                            <h3 id="newsletter-subheadline">Here's your weekly briefing.</h3>
                                         </td>
+                                    </tr>
+                                    <tr id="topStory">
+                                        <td valign="top">
+                                          <center><img src="images/jordan_smart.jpg" style="max-width:400px" /></center>
+                                          <div mc:edit="top_story_headline"><h2 id="topStoryHeadline">College ranks high on three Princeton Review lists</h2></div>
+                                        <div mc:edit="top_story_body">
+                                          <h3 id="topStoryBody">
+                                            We're 16th for Students who Study the Most and Best Athletic Facilities, and 19th for Most Politically Active Students. Some students are pleasantly surprised, others are skeptically surprised and still others are inspired to live out these distinctions with renewed passion. Read their reactions in full.
+                                          </h3>
+                                        </div>
+                                      </td>
                                     </tr>
                                 </table>
                                 <!-- // END BODY -->
@@ -624,18 +661,24 @@
                                 	<tr mc:repeatable>
                                     	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
                                         	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                              <tr>
+                                                  <td class="leftColumnContent" mc:edit="medium_story_1_tagline" style="padding-bottom:0px !important;">
+                                                    <h3 style="display:block !important">Ancient art acquisition</h3>
+                                                  </td>
+                                              </tr>
                                             	<tr>
                                                 	<td class="leftColumnContent">
-                                                    	<img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/header_placeholder_260px.png" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" />
+                                                    	<img src="images/roman_broach.jpg" style="max-width:260px;max-height:200px" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                	<td valign="top" class="leftColumnContent" mc:edit="left_column_content">
-                                                        <h3>Repeatable Content</h3>
-                                                        <a href="http://kb.mailchimp.com/article/how-do-i-work-with-repeatable-content-blocks" target="_blank">Repeatable sections</a> are noted with plus and minus signs so that you can add and subtract content blocks.
-                                                        <br />
-                                                        <br />
-                                                        You can also get a little fancy; repeat blocks and remove all text to make image galleries, or do the opposite and remove images for text-only blocks.
+                                                  <td valign="top" class="leftColumnContent mediumHeadlineCell" mc:edit="medium_story_1_headline">
+                                                    <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td valign="top" class="leftColumnContent" mc:edit="medium_story_1_body">
+                                                      <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -643,17 +686,23 @@
                                     	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
                                         	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                             	<tr>
+                                                  <td class="rightColumnContent" mc:edit="medium_story_2_tagline" style="padding-bottom:0px !important;">
+                                                    <h3 style="display:block !important">Title XI coordinator</h3>
+                                                  </td>
+                                              </tr>
+                                              <tr>
                                                 	<td class="rightColumnContent">
-                                                    	<img src="http://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/header_placeholder_260px.png" style="max-width:260px;" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" />
+                                                    	<img src="images/edgewood_theatre.jpg" style="max-width:260px;display:block !important" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                	<td valign="top" class="rightColumnContent" mc:edit="right_column_content">
-                                                        <h3>Repeatable Content</h3>
-                                                        <a href="http://kb.mailchimp.com/article/how-do-i-work-with-repeatable-content-blocks" target="_blank">Repeatable sections</a> are noted with plus and minus signs so that you can add and subtract content blocks.
-                                                        <br />
-                                                        <br />
-                                                        You can also get a little fancy; repeat blocks and remove all text to make image galleries, or do the opposite and remove images for text-only blocks.
+                                                  <td valign="top" class="rightColumnContent mediumHeadlineCell" mc:edit="medium_story_2_headline">
+                                                    <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                	<td valign="top" class="rightColumnContent" mc:edit="medium_story_2_body">
+                                                      <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
                                                     </td>
                                                 </tr>
                                             </table>
