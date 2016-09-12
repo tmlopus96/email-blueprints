@@ -76,6 +76,10 @@
 		/*@editable*/ text-align:left;
 	}
 
+  a {
+    color: #fac10d !important;
+  }
+
 	#newsletter-title {
 		text-align: center;
 		/*letter-spacing: 8px;*/
@@ -120,6 +124,59 @@
   .mediumStoryBody {
     font-family: Palatino;
     font-style: normal !important;
+  }
+
+  #ofTheWeekContentRow > td {
+    vertical-align: top;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right:1px solid #404040
+!important;
+    width: 100% !important;
+  }
+
+  #ofTheWeekContentRow {
+  }
+
+  #ofTheWeekHeader {
+    font-family: Helvetica;
+    font-size: 38px !important;
+    font-style: italic;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+
+  .ofTheWeekItemHeader {
+    color: black !important;
+    font-size: 24px;
+  }
+
+  .ofTheWeekItemBody {
+    font-family: Palatino;
+    font-style: normal;
+    line-height: 20px;
+    margin-bottom: 0 !important;
+  }
+
+  .lowStory {
+    padding-top: 20px;
+  }
+
+  .lowStoryHeadline {
+    font-family: Palatino;
+    font-style: normal;
+    font-weight: bold;
+    color: black !important;
+    margin-bottom:0;
+    padding-bottom: 5px;
+  }
+
+  .lowStoryBody {
+    font-family: Palatino;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom:0;
   }
 
 	/**
@@ -324,6 +381,19 @@
 
 	.templateColumnContainer{width:260px;}
 
+  .templateThreeColumnContainer{
+    width:200px;
+    border-right:1px solid #606060;
+  }
+
+  .templateThreeColumnContainer, .templateThreeColumnContainer:before, .templateThreeColumnContainer:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+	/*.ofTheWeekColumnContainer{width:200px;}*/
+
 	/**
 	* @tab Columns
 	* @section column style
@@ -363,6 +433,58 @@
 		/*@editable*/ text-decoration:underline;
 	}
 
+  /**
+  * @tab Columns
+  * @section left column text
+  * @tip style for 3-column block
+  */
+  .leftThreeColumnContent{
+    /*@editable*/ color:#505050;
+    /*@editable*/ font-family:Helvetica;
+    /*@editable*/ font-size:14px;
+    /*@editable*/ line-height:150%;
+    padding-top:0;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    /*@editable*/ text-align:left;
+    border-bottom: none !important;
+  }
+
+  /**
+  * @tab Columns
+  * @section left column link
+  * @tip Set the styling for your email's left column content links. Choose a color that helps them stand out from your text.
+  */
+  .leftThreeColumnContent a:link, .leftThreeColumnContent a:visited, /* Yahoo! Mail Override */ .leftThreeColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+    /*@editable*/ color:#EB4102;
+    /*@editable*/ font-weight:normal;
+    /*@editable*/ text-decoration:underline;
+  }
+
+  .centerThreeColumnContent{
+    /*@editable*/ color:#505050;
+    /*@editable*/ font-family:Helvetica;
+    /*@editable*/ font-size:14px;
+    /*@editable*/ line-height:150%;
+    padding-top:0;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    /*@editable*/ text-align:left;
+  }
+
+  /**
+  * @tab Columns
+  * @section center column link
+  * @tip Set the styling for your email's center column content links. Choose a color that helps them stand out from your text.
+  */
+  .centerThreeColumnContent a:link, .centerThreeColumnContent a:visited, /* Yahoo! Mail Override */ .centerThreeColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+    /*@editable*/ color:#EB4102;
+    /*@editable*/ font-weight:normal;
+    /*@editable*/ text-decoration:underline;
+  }
+
 	/**
 	* @tab Columns
 	* @section right column text
@@ -391,11 +513,45 @@
 		/*@editable*/ text-decoration:underline;
 	}
 
+  /**
+  * @tab Columns
+  * @section right column text
+  * @tip Set the styling for your email's right column content text. Choose a size and color that is easy to read.
+  */
+  .rightThreeColumnContent{
+    /*@editable*/ color:#505050;
+    /*@editable*/ font-family:Helvetica;
+    /*@editable*/ font-size:14px;
+    /*@editable*/ line-height:150%;
+    padding-top:0;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    /*@editable*/ text-align:left;
+  }
+
+  /**
+  * @tab Columns
+  * @section right column link
+  * @tip Set the styling for your email's right column content links. Choose a color that helps them stand out from your text.
+  */
+  .rightThreeColumnContent a:link, .rightThreeColumnContent a:visited, /* Yahoo! Mail Override */ .rightThreeColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+    /*@editable*/ color:#EB4102;
+    /*@editable*/ font-weight:normal;
+    /*@editable*/ text-decoration:underline;
+  }
+
 	.leftColumnContent img, .rightColumnContent img{
 		display:inline;
 		height:auto;
 		max-width:260px;
 	}
+
+  .leftThreeColumnContent img, .rightThreeColumnContent img{
+    display:inline;
+    height:auto;
+    max-width:260px;
+  }
 
 	/* ========== Footer Styles ========== */
 
@@ -473,6 +629,19 @@
 			/*@editable*/ line-height:100% !important;
 		}
 
+    #newsletter-title {
+      font-size: 48px !important;
+    }
+
+    #newsletter-subheadline {
+      font-size:24px !important;
+    }
+
+    #ofTheWeekHeader {
+      font-size: 42px !important;
+      margin-bottom:0;
+    }
+
 		/**
 		* @tab Mobile Styles
 		* @section heading 2
@@ -492,6 +661,11 @@
 			/*@editable*/ font-size:18px !important;
 			/*@editable*/ line-height:100% !important;
 		}
+
+    .ofTheWeekItemBody {
+      padding-bottom:20px;
+      border-bottom:1px solid #606060;
+    }
 
 		/**
 		* @tab Mobile Styles
@@ -542,7 +716,9 @@
 
 		/* ======== Column Styles ======== */
 
-		.templateColumnContainer{display:block !important; width:100% !important;}
+		.templateColumnContainer, .templateThreeColumnContainer{display:block !important; width:100% !important;}
+
+		/*.ofTheWeekColumnContainer{display:block !important; width:100% !important;}*/
 
 		/**
 		* @tab Mobile Styles
@@ -560,17 +736,33 @@
 		* @section left column text
 		* @tip Make the left column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
 		*/
-		.leftColumnContent{
+		.leftColumnContent, .leftThreeColumnContent{
 			/*@editable*/ font-size:16px !important;
 			/*@editable*/ line-height:125% !important;
+      /*border-bottom:1px solid #606060 !important;*/
 		}
+
+    .leftThreeColumnContent, .centerThreeColumnContent{
+      padding-bottom:0;
+    }
+
+    /**
+    * @tab Mobile Styles
+    * @section center column text
+    * @tip Make the center column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+    .centerThreeColumnContent{
+      /*@editable*/ font-size:16px !important;
+      /*@editable*/ line-height:125% !important;
+      /*border-bottom:1px solid #606060 !important;*/
+    }
 
 		/**
 		* @tab Mobile Styles
 		* @section right column text
 		* @tip Make the right column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
 		*/
-		.rightColumnContent{
+		.rightColumnContent, .rightThreeColumnContent{
 			/*@editable*/ font-size:16px !important;
 			/*@editable*/ line-height:125% !important;
 		}
@@ -598,150 +790,222 @@
             	<td align="center" valign="top" id="bodyCell">
                 	<!-- BEGIN TEMPLATE // -->
                 	<table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
-                    	<tr>
-                        	<td align="center" valign="top">
-                            	<!-- BEGIN PREHEADER // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
-                                    <tr>
-                                        <td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content00">
-                                            Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
-                                        </td>
-                                        <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                        <td valign="top" width="180" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;" mc:edit="preheader_content01">
-                                            Email not displaying correctly?<br /><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
-                                        </td>
-                                        <!-- *|END:IF|* -->
-                                    </tr>
-                                </table>
-                                <!-- // END PREHEADER -->
-                            </td>
-                        </tr>
-                    	<tr>
-                        	<td align="center" valign="top">
-                            	<!-- BEGIN HEADER // -->
-                                <!-- <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
-                                    <tr>
-                                        <td valign="top" class="headerContent">
-                                        	<img src="http://gallery.mailchimp.com/2425ea8ad3/images/header_placeholder_600px.png" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
-                                        </td>
-                                    </tr>
-                                </table> -->
-                                <!-- // END HEADER -->
-                            </td>
-                        </tr>
-                    	<tr>
-                        	<td align="center" valign="top">
-                            	<!-- BEGIN BODY // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
-                                    <tr>
-                                        <td valign="top" class="bodyContent" mc:edit="body_content">
-                                            <h1 id="newsletter-title">Happy Friday</h1>
-                                            <h3 id="newsletter-subheadline">Here's your weekly briefing.</h3>
-                                        </td>
-                                    </tr>
-                                    <tr id="topStory">
-                                        <td valign="top">
-                                          <center><img src="images/jordan_smart.jpg" style="max-width:400px" /></center>
-                                          <div mc:edit="top_story_headline"><h2 id="topStoryHeadline">College ranks high on three Princeton Review lists</h2></div>
-                                        <div mc:edit="top_story_body">
-                                          <h3 id="topStoryBody">
-                                            We're 16th for Students who Study the Most and Best Athletic Facilities, and 19th for Most Politically Active Students. Some students are pleasantly surprised, others are skeptically surprised and still others are inspired to live out these distinctions with renewed passion. Read their reactions in full.
-                                          </h3>
-                                        </div>
+                  	<tr>
+                      	<td align="center" valign="top">
+                          	<!-- BEGIN PREHEADER // -->
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
+                                  <tr>
+                                      <td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content00">
+                                          Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
                                       </td>
-                                    </tr>
-                                </table>
-                                <!-- // END BODY -->
-                            </td>
-                        </tr>
+                                      <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                                      <td valign="top" width="180" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;" mc:edit="preheader_content01">
+                                          Email not displaying correctly?<br /><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
+                                      </td>
+                                      <!-- *|END:IF|* -->
+                                  </tr>
+                              </table>
+                              <!-- // END PREHEADER -->
+                          </td>
+                      </tr>
                     	<tr>
-                        	<td align="center" valign="top">
-                            	<!-- BEGIN COLUMNS // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
-                                	<tr mc:repeatable>
-                                    	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
-                                        	<table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                              <tr>
-                                                  <td class="leftColumnContent" mc:edit="medium_story_1_tagline" style="padding-bottom:0px !important;">
-                                                    <h3 style="display:block !important">Ancient art acquisition</h3>
-                                                  </td>
-                                              </tr>
-                                            	<tr>
-                                                	<td class="leftColumnContent">
-                                                    	<img src="images/roman_broach.jpg" style="max-width:260px;max-height:200px" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                  <td valign="top" class="leftColumnContent mediumHeadlineCell" mc:edit="medium_story_1_headline">
-                                                    <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <td valign="top" class="leftColumnContent" mc:edit="medium_story_1_body">
-                                                      <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
-                                        	<table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                            	<tr>
-                                                  <td class="rightColumnContent" mc:edit="medium_story_2_tagline" style="padding-bottom:0px !important;">
-                                                    <h3 style="display:block !important">Title XI coordinator</h3>
-                                                  </td>
-                                              </tr>
-                                              <tr>
-                                                	<td class="rightColumnContent">
-                                                    	<img src="images/edgewood_theatre.jpg" style="max-width:260px;display:block !important" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                  <td valign="top" class="rightColumnContent mediumHeadlineCell" mc:edit="medium_story_2_headline">
-                                                    <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                	<td valign="top" class="rightColumnContent" mc:edit="medium_story_2_body">
-                                                      <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- // END COLUMNS -->
-                            </td>
+                        <td align="center" valign="top">
+                          <!-- BEGIN HEADER // -->
+                          <!-- <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                          <tr>
+                          <td valign="top" class="headerContent">
+                          <img src="http://gallery.mailchimp.com/2425ea8ad3/images/header_placeholder_600px.png" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
+                        </td>
+                      </tr>
+                    </table> -->
+                    <!-- // END HEADER -->
+                  </td>
                         </tr>
-                    	<tr>
-                        	<td align="center" valign="top">
-                            	<!-- BEGIN FOOTER // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
-                                    <tr>
-                                        <td valign="top" class="footerContent" mc:edit="footer_content00">
-                                            <a href="*|TWITTER:PROFILEURL|*">Follow on Twitter</a>&nbsp;&nbsp;&nbsp;<a href="*|FACEBOOK:PROFILEURL|*">Friend on Facebook</a>&nbsp;&nbsp;&nbsp;<a href="*|FORWARD|*">Forward to Friend</a>&nbsp;
+                      	<tr>
+                          	<td align="center" valign="top">
+                              	<!-- BEGIN BODY // -->
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                                      <tr>
+                                          <td valign="top" class="bodyContent" mc:edit="body_content">
+                                              <h1 id="newsletter-title">Happy Friday</h1>
+                                              <h3 id="newsletter-subheadline">Here's your weekly briefing.</h3>
+                                          </td>
+                                      </tr>
+                                      <tr id="topStory">
+                                          <td valign="top">
+                                            <center><img src="images/jordan_smart.jpg" style="max-width:400px" /></center>
+                                            <div mc:edit="top_story_headline"><h2 id="topStoryHeadline">College ranks high on three Princeton Review lists</h2></div>
+                                          <div mc:edit="top_story_body">
+                                            <h3 id="topStoryBody">
+                                              We're 16th for Students who Study the Most and Best Athletic Facilities, and 19th for Most Politically Active Students. Some students are pleasantly surprised, others are skeptically surprised and still others are inspired to live out these distinctions with renewed passion. Read their reactions in full.
+                                            </h3>
+                                          </div>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content01">
-                                            <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
-                                            <br />
-                                            *|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
-                                            <br />
-                                            <br />
-                                            <strong>Our mailing address is:</strong>
-                                            <br />
-                                            *|HTML:LIST_ADDRESS_HTML|* *|END:IF|*
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content02">
-                                        	<a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- // END FOOTER -->
-                            </td>
-                        </tr>
+                                      </tr>
+                                  </table>
+                                  <!-- // END BODY -->
+                              </td>
+                          </tr>
+                        	<tr>
+                            	<td align="center" valign="top">
+                                	<!-- BEGIN COLUMNS // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="border-bottom: none !important">
+                                    	<tr mc:repeatable>
+                                        	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                            	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                  <tr>
+                                                      <td class="leftColumnContent" mc:edit="medium_story_1_tagline" style="padding-bottom:0px !important;">
+                                                        <h3 style="display:block !important">Ancient art acquisition</h3>
+                                                      </td>
+                                                  </tr>
+                                                	<tr>
+                                                    	<td class="leftColumnContent">
+                                                        	<img src="images/roman_broach.jpg" style="max-width:260px;max-height:200px" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td valign="top" class="leftColumnContent mediumHeadlineCell" mc:edit="medium_story_1_headline">
+                                                        <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td valign="top" class="leftColumnContent" mc:edit="medium_story_1_body">
+                                                          <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                            	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                	<tr>
+                                                      <td class="rightColumnContent" mc:edit="medium_story_2_tagline" style="padding-bottom:0px !important;">
+                                                        <h3 style="display:block !important">Title XI coordinator</h3>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                    	<td class="rightColumnContent">
+                                                        	<img src="images/edgewood_theatre.jpg" style="max-width:260px;display:block !important" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td valign="top" class="rightColumnContent mediumHeadlineCell" mc:edit="medium_story_2_headline">
+                                                        <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td valign="top" class="rightColumnContent" mc:edit="medium_story_2_body">
+                                                          <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END COLUMNS -->
+                                </td>
+                            </tr>
+                            <tr>
+                              	<td align="center" valign="top" style="padding-bottom:15px; background-color:#f5cb46">
+                                  <h1 id="ofTheWeekHeader">* of the Week</h1>
+                                  	<!-- BEGIN COLUMNS // -->
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="border-bottom:none !important; border-top:none !important; background-color:#f5cb46;">
+                                      	<tr mc:repeatable>
+                                          	<td align="center" valign="top" class="templateThreeColumnContainer" style="padding-top:20px;">
+                                              	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                  	<tr>
+                                                      	<td class="leftThreeColumnContent">
+                                                          <h2 class="ofTheWeekItemHeader">*Quote</h2>
+                                                          <h3 class="ofTheWeekItemBody">"Let's see what the students are complaining about this week" <strong>- Heather Fitz-Gibbons</strong></h3>
+                                                          </td>
+                                                      </tr>
+                                                  </table>
+                                              </td>
+                                          	<td align="center" valign="top" class="templateThreeColumnContainer" style="padding-top:20px;">
+                                              	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                  	<tr>
+                                                      	<td class="centerThreeColumnContent">
+                                                          <h2 class="ofTheWeekItemHeader">*Event</h2>
+                                                          <h3 class="ofTheWeekItemBody" ><strong>Edgewood Theatre Festival</strong> - Saturday, 7 p.m., Schoolroy Theatre</h3>
+                                                          </td>
+                                                      </tr>
+                                                  </table>
+                                              </td>
+                                          	<td align="center" valign="top" class="templateThreeColumnContainer" style="padding-top:20px; border-right:none">
+                                              	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                  	<tr>
+                                                      	<td class="rightThreeColumnContent">
+                                                          <h2 class="ofTheWeekItemHeader">*Poll</h2>
+                                                          <h3 class="ofTheWeekItemBody" style="padding-bottom:0 !important; border-bottom:0 !important">What do <em>you</em> think of the <em>Princeton Review</em> rankings?</h3>
+                                                          <h3><strong>Vote here.</strong></h3>
+                                                          </td>
+                                                      </tr>
+                                                  </table>
+                                              </td>
+                                          </tr>
+                                      </table>
+                                      <!-- // END COLUMNS -->
+                                  </td>
+                              </tr>
+                    <tr>
+                      <td height="30px" valign="bottom" style="border-bottom:1px solid white">
+                        <hr size="1" style="color:rgb(204, 204, 204);margin:0"/>
+                      </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #CCCCCC !important">
+                      <td style="padding-top:10px;padding-bottom:15px;">
+                        <div class="lowStory" mc:repeatable mc:edit="low_story_1">
+                          <h3 class="lowStoryHeadline">- Harassment by boobs</h3>
+                          <p class="lowStoryBody">Friday morning, a student filed a sexual harrassment complaint because they were uncomfortable with the person in line behind them at MacCleod's (C-Store) having boobs.<br /><br />Campus Life is investigating. No word yet on whether it was the same student who feels harassed by acknowledgement that the clitoris exists.</p>
+                        </div>
+                        <div class="lowStory" mc:repeatable mc:edit="low_story_2">
+                          <h3 class="lowStoryHeadline">- Canonizing Linda Morgan Clement</h3>
+                          <p class="lowStoryBody">The outgoing campus chaplain is now officially recognized as a saint by The College of Wooster.<br /><br />President Sarah Bolton presided over the canonization ceremony, held on the dirt lot where Overholt House used to be.</p>
+                        </div>
+                        <div class="lowStory" mc:repeatable mc:edit="low_story_3">
+                          <h3 class="lowStoryHeadline">- Scott Brown's hat lost</h3>
+                          <p class="lowStoryBody">Vice president for...yada yada yada Student Affairs Scott Brown lost his iconic baseball cap early Tuesday afternoon. Brown was reportedly so distraught that he had to leave work early and did not come the next day.<br /><br />Anyone with information on the whereabouts of the hat is asked to contact SPS immmediately.</p>
+                        </div>
+                        <div style="padding-top:25px;">
+                          <p class="lowStoryBody" style="font-style:italic">
+                            <strong>That's all for this week.</strong> Be sure to pick up this week's print edition in Lowry or Old Main.
+                          </p>
+                          <br />
+                          <p class="lowStoryBody" style="font-style:italic">
+                            How are you liking the weekly briefing? Have any suggestions? Shoot us an email at <a href="mailto:voice@wooster.edu">voice@wooster.edu</a>.
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  	<tr>
+                      	<td align="center" valign="top">
+                          	<!-- BEGIN FOOTER // -->
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                                  <tr>
+                                      <td valign="top" class="footerContent" mc:edit="footer_content00">
+                                          <a href="*|TWITTER:PROFILEURL|*">Follow on Twitter</a>&nbsp;&nbsp;&nbsp;<a href="*|FACEBOOK:PROFILEURL|*">Friend on Facebook</a>&nbsp;&nbsp;&nbsp;<a href="*|FORWARD|*">Forward to Friend</a>&nbsp;
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content01">
+                                          <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
+                                          <br />
+                                          *|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
+                                          <br />
+                                          <br />
+                                          <strong>Our mailing address is:</strong>
+                                          <br />
+                                          *|HTML:LIST_ADDRESS_HTML|* *|END:IF|*
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content02">
+                                      	<a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
+                                      </td>
+                                  </tr>
+                              </table>
+                              <!-- // END FOOTER -->
+                          </td>
+                      </tr>
                     </table>
                     <!-- // END TEMPLATE -->
                 </td>
