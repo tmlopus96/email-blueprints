@@ -77,13 +77,13 @@
 	}
 
   a {
-    color: #fac10d !important;
+    /*@editable*/ color: #fac10d !important;
   }
 
 	#newsletter-title {
 		text-align: center;
 		/*letter-spacing: 8px;*/
-		font-size: 88px;
+		/*@editable*/ font-size: 88px;
 		color:#fac10d !important;
 	}
 
@@ -91,7 +91,7 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 		text-align: center;
-		font-size: 20px;
+		/*@editable*/ font-size: 20px;
 	}
 
   #topStoryHeadline {
@@ -99,15 +99,15 @@
     padding-top: 20px;
     padding-bottom:5px;
     margin-bottom: 0 !important;
-    font-family: Helvetica;
-    font-weight:600;
-    font-style:italic;
-    font-size: 28px;
+    /*@editable*/ font-family: Helvetica;
+    /*@editable*/ font-weight:600;
+    /*@editable*/ font-style:italic;
+    /*@editable*/ font-size: 28px;
   }
 
   #topStoryBody {
-    font-family: Palatino;
-    font-size: 19px;
+    /*@editable*/ font-family: Palatino;
+    /*@editable*/ font-size: 19px;
     line-height: 22px;
     font-style: normal !important;
   }
@@ -123,6 +123,7 @@
 
   .mediumStoryBody {
     font-family: Palatino;
+    line-height: 20px;
     font-style: normal !important;
   }
 
@@ -133,9 +134,6 @@
     border-right:1px solid #404040
 !important;
     width: 100% !important;
-  }
-
-  #ofTheWeekContentRow {
   }
 
   #ofTheWeekHeader {
@@ -149,7 +147,11 @@
 
   .ofTheWeekItemHeader {
     color: black !important;
-    font-size: 24px;
+    /*@editable*/ font-size: 24px;
+  }
+
+  .ofTheWeekItemHeader > a {
+    color:black !important;
   }
 
   .ofTheWeekItemBody {
@@ -157,6 +159,10 @@
     font-style: normal;
     line-height: 20px;
     margin-bottom: 0 !important;
+  }
+
+  .ofTheWeekItemBody > a {
+    color:black !important;
   }
 
   .lowStory {
@@ -630,16 +636,38 @@
 		}
 
     #newsletter-title {
-      font-size: 48px !important;
+      /*@editable*/ font-size: 64px !important;
     }
 
     #newsletter-subheadline {
-      font-size:24px !important;
+      /*@editable*/ font-size:24px !important;
+    }
+
+    #topStoryHeadline {
+      font-size: 26px !important;
     }
 
     #ofTheWeekHeader {
       font-size: 42px !important;
       margin-bottom:0;
+    }
+
+    .ofTheWeekItemHeader {
+      font-size: 28px !important;
+      padding-bottom:5px;
+    }
+
+    .ofTheWeekItemBody {
+      font-size: 20px !important;
+    }
+
+    .ofTheWeekItemHeader, .ofTheWeekItemBody {
+      width: 90%;
+      margin-left: 0;
+    }
+
+    .lowStoryHeadline {
+      font-size: 20px !important;
     }
 
 		/**
@@ -718,7 +746,9 @@
 
 		.templateColumnContainer, .templateThreeColumnContainer{display:block !important; width:100% !important;}
 
-		/*.ofTheWeekColumnContainer{display:block !important; width:100% !important;}*/
+    .templateThreeColumnContainer {
+      border-right: none !important;
+    }
 
 		/**
 		* @tab Mobile Styles
@@ -728,8 +758,10 @@
 		.columnImage{
 			height:auto !important;
 			/*@editable*/ max-width:480px !important;
-			/*@editable*/ width:100% !important;
+			/*@editable*/ /*width:100% !important;*/
 		}
+
+
 
 		/**
 		* @tab Mobile Styles
@@ -809,26 +841,26 @@
                           </td>
                       </tr>
                     	<tr>
-                        <td align="center" valign="top">
-                          <!-- BEGIN HEADER // -->
+                        <!-- <td align="center" valign="top">
+                          <!-- BEGIN HEADER //
                           <!-- <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                           <tr>
                           <td valign="top" class="headerContent">
                           <img src="http://gallery.mailchimp.com/2425ea8ad3/images/header_placeholder_600px.png" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
                         </td>
                       </tr>
-                    </table> -->
-                    <!-- // END HEADER -->
+                    </table>
+                    <!-- // END HEADER
                   </td>
-                        </tr>
+                        </tr> -->
                       	<tr>
                           	<td align="center" valign="top">
                               	<!-- BEGIN BODY // -->
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                                       <tr>
-                                          <td valign="top" class="bodyContent" mc:edit="body_content">
-                                              <h1 id="newsletter-title">Happy Friday</h1>
-                                              <h3 id="newsletter-subheadline">Here's your weekly briefing.</h3>
+                                          <td valign="top" class="bodyContent">
+                                              <div mc:edit="newsletter_title"><h1 id="newsletter-title">Happy Friday</h1></div>
+                                              <div mc:edit="newsletter_subtitle"><h3 id="newsletter-subheadline">Here's your weekly briefing.</h3></div>
                                           </td>
                                       </tr>
                                       <tr id="topStory">
@@ -837,7 +869,7 @@
                                             <div mc:edit="top_story_headline"><h2 id="topStoryHeadline">College ranks high on three Princeton Review lists</h2></div>
                                           <div mc:edit="top_story_body">
                                             <h3 id="topStoryBody">
-                                              We're 16th for Students who Study the Most and Best Athletic Facilities, and 19th for Most Politically Active Students. Some students are pleasantly surprised, others are skeptically surprised and still others are inspired to live out these distinctions with renewed passion. Read their reactions in full.
+                                              We're 16th for Students who Study the Most and Best Athletic Facilities, and 19th for Most Politically Active Students. Some students are pleasantly surprised, others are skeptically surprised and still others are inspired to live out these distinctions with renewed passion. <a href="http://www.thewoostervoice.spaces.wooster.edu">Read their reactions in full</a>.
                                             </h3>
                                           </div>
                                         </td>
@@ -879,7 +911,7 @@
                                             	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                 	<tr>
                                                       <td class="rightColumnContent" mc:edit="medium_story_2_tagline" style="padding-bottom:0px !important;">
-                                                        <h3 style="display:block !important">Title XI coordinator</h3>
+                                                        <h3 style="display:block !important">Yung thespians</h3>
                                                       </td>
                                                   </tr>
                                                   <tr>
@@ -889,12 +921,12 @@
                                                     </tr>
                                                     <tr>
                                                       <td valign="top" class="rightColumnContent mediumHeadlineCell" mc:edit="medium_story_2_headline">
-                                                        <h2 class="mediumStoryHeadline">CWAM added $25,000 worth of ancient and medieval art to its collection.</h2>
+                                                        <h2 class="mediumStoryHeadline">Winners of the Edgewood playwrighting compeition will stage their work at the College this weekend</h2>
                                                       </td>
                                                     </tr>
                                                     <tr>
                                                     	<td valign="top" class="rightColumnContent" mc:edit="medium_story_2_body">
-                                                          <h3 class="mediumStoryBody">The purchase was made possible by a grant from the Hewlett-Mellon Foundation. Among the acquired pieces are ancient Roman broaches, Egyptian glasswork, and Islamic leaf manuscripts. See photos and read about the rich historical and cultural significance of these artifacts.</h3>
+                                                          <h3 class="mediumStoryBody">The contest was organized by Wooster senior Eli Milette, and each play has been directed by a College theatre and dance student. <a href="http://www.thewoostervoice.spaces.wooster.edu">Read about complete process here.</a> The curtain goes up Saturday night at 7:00 p.m.</h3>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -914,8 +946,8 @@
                                               	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                   	<tr>
                                                       	<td class="leftThreeColumnContent">
-                                                          <h2 class="ofTheWeekItemHeader">*Quote</h2>
-                                                          <h3 class="ofTheWeekItemBody">"Let's see what the students are complaining about this week" <strong>- Heather Fitz-Gibbons</strong></h3>
+                                                          <div mc:edit="of_the_week_1_header"><h2 class="ofTheWeekItemHeader">*Quote</h2></div>
+                                                          <div mc:edit="of_the_week_1_body"><h3 class="ofTheWeekItemBody">"Let's see what the students are complaining about this week" <strong>- Heather Fitz-Gibbons</strong></h3></div>
                                                           </td>
                                                       </tr>
                                                   </table>
@@ -924,8 +956,8 @@
                                               	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                   	<tr>
                                                       	<td class="centerThreeColumnContent">
-                                                          <h2 class="ofTheWeekItemHeader">*Event</h2>
-                                                          <h3 class="ofTheWeekItemBody" ><strong>Edgewood Theatre Festival</strong> - Saturday, 7 p.m., Schoolroy Theatre</h3>
+                                                          <div mc:edit="of_the_week_2_header"><h2 class="ofTheWeekItemHeader">*Event</h2></div>
+                                                          <div mc:edit="of_the_week_2_body"><h3 class="ofTheWeekItemBody" ><strong>Edgewood Theatre Festival</strong> - <a href="http://www.thewoostervoice.spaces.wooster.edu">Saturday, 7 p.m., Schoolroy Theatre</a></h3></div>
                                                           </td>
                                                       </tr>
                                                   </table>
@@ -934,9 +966,8 @@
                                               	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                   	<tr>
                                                       	<td class="rightThreeColumnContent">
-                                                          <h2 class="ofTheWeekItemHeader">*Poll</h2>
-                                                          <h3 class="ofTheWeekItemBody" style="padding-bottom:0 !important; border-bottom:0 !important">What do <em>you</em> think of the <em>Princeton Review</em> rankings?</h3>
-                                                          <h3><strong>Vote here.</strong></h3>
+                                                          <div mc:edit="of_the_week_3_header"><h2 class="ofTheWeekItemHeader">*Poll</h2></div>
+                                                          <div mc:edit="of_the_week_3_body"><h3 class="ofTheWeekItemBody" style="padding-bottom:0 !important; border-bottom:0 !important">What do <em>you</em> think of the <em>Princeton Review</em> rankings?<br /><a><strong>Vote here.</strong></a></h3></div>
                                                           </td>
                                                       </tr>
                                                   </table>
@@ -953,23 +984,24 @@
                     </tr>
                     <tr style="border-bottom:1px solid #CCCCCC !important">
                       <td style="padding-top:10px;padding-bottom:15px;">
-                        <div class="lowStory" mc:repeatable mc:edit="low_story_1">
-                          <h3 class="lowStoryHeadline">- Harassment by boobs</h3>
-                          <p class="lowStoryBody">Friday morning, a student filed a sexual harrassment complaint because they were uncomfortable with the person in line behind them at MacCleod's (C-Store) having boobs.<br /><br />Campus Life is investigating. No word yet on whether it was the same student who feels harassed by acknowledgement that the clitoris exists.</p>
+                        <div class="lowStory" mc:repeatable>
+                          <div mc:edit="low_story_1_headline"><h3 class="lowStoryHeadline">- Harassment by boobs</h3></div>
+                          <div mc:edit="low_story_1_body"><p class="lowStoryBody">Friday morning, a student filed a sexual harrassment complaint because they were uncomfortable with the person in line behind them at MacCleod's (C-Store) having boobs.<br /><br />Campus Life is investigating. No word yet on whether it was the same student who feels harassed by acknowledgement that the clitoris exists.</p></div>
                         </div>
-                        <div class="lowStory" mc:repeatable mc:edit="low_story_2">
-                          <h3 class="lowStoryHeadline">- Canonizing Linda Morgan Clement</h3>
-                          <p class="lowStoryBody">The outgoing campus chaplain is now officially recognized as a saint by The College of Wooster.<br /><br />President Sarah Bolton presided over the canonization ceremony, held on the dirt lot where Overholt House used to be.</p>
+                        <div class="lowStory" mc:repeatable>
+                          <div mc:edit="low_story_2_headline"><h3 class="lowStoryHeadline">- Canonizing Linda Morgan Clement</h3></div>
+                          <div mc:edit="low_story_2_body"><p class="lowStoryBody">The outgoing campus chaplain is now officially recognized as a saint by The College of Wooster.<br /><br />President Sarah Bolton presided over the canonization ceremony, held on the dirt lot where Overholt House used to be.</p></div>
                         </div>
-                        <div class="lowStory" mc:repeatable mc:edit="low_story_3">
-                          <h3 class="lowStoryHeadline">- Scott Brown's hat lost</h3>
-                          <p class="lowStoryBody">Vice president for...yada yada yada Student Affairs Scott Brown lost his iconic baseball cap early Tuesday afternoon. Brown was reportedly so distraught that he had to leave work early and did not come the next day.<br /><br />Anyone with information on the whereabouts of the hat is asked to contact SPS immmediately.</p>
+                        <div class="lowStory" mc:repeatable>
+                          <div mc:edit="low_story_3_headline"><h3 class="lowStoryHeadline">- Scott Brown's hat lost</h3></div>
+                          <div mc:edit="low_story_3_body"><p class="lowStoryBody">Vice president for...yada yada yada Student Affairs Scott Brown lost his iconic baseball cap early Tuesday afternoon. Brown was reportedly so distraught that he had to leave work early and did not come the next day.<br /><br />Anyone with information on the whereabouts of the hat is asked to contact SPS immmediately.</p></div>
                         </div>
-                        <div style="padding-top:25px;">
-                          <p class="lowStoryBody" style="font-style:italic">
+                        <div mc:edit="signoff" style="padding-top:30px;">
+                        <hr width="10%" align="left">
+                          <p class="lowStoryBody" style="font-style:italic;padding-top:7px">
                             <strong>That's all for this week.</strong> Be sure to pick up this week's print edition in Lowry or Old Main.
                           </p>
-                          <br />
+                          <br>
                           <p class="lowStoryBody" style="font-style:italic">
                             How are you liking the weekly briefing? Have any suggestions? Shoot us an email at <a href="mailto:voice@wooster.edu">voice@wooster.edu</a>.
                           </p>
